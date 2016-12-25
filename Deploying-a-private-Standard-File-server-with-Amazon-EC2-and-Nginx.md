@@ -201,7 +201,7 @@ These instructions make the following assumptions:
 1. You're done!
 
 ## Using your new server
-You can immediately start using your new server by using the client app at https://app.neeto.io.
+You can immediately start using your new server by using the Standard Notes app at https://app.standardnotes.org.
 
 In the account menu, enter the address of your new server and press Change Server:
 
