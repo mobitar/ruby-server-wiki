@@ -69,7 +69,7 @@ These instructions make the following assumptions:
 
 	```
 	mysql -u root -p
-	> create database notes;
+	> create database items;
 	> quit;
 	```
 
@@ -137,17 +137,17 @@ These instructions make the following assumptions:
 	    server_name domain.com;
 	    passenger_enabled on;
 	    passenger_app_env production;
-	    root /home/ec2-user/standard-notes/public;
+	    root /home/ec2-user/standard-file/public;
 	  }
 	```
 
 
-1. Make sure you are in your home directory and clone the Standard Notes [ruby-server](https://github.com/standardnotes/ruby-server) project:
+1. Make sure you are in your home directory and clone the Standard File [ruby-server](https://github.com/standardfile/ruby-server) project:
 	
 	```
 	cd ~
-  	git clone https://github.com/standardnotes/ruby-server.git
-	cd standard-notes-server
+  	git clone https://github.com/standardfile/ruby-server.git
+	cd ruby-server
 	```
 
 1. Setup project:
@@ -171,7 +171,7 @@ These instructions make the following assumptions:
 	
 	DB_HOST=localhost
 	DB_PORT=3306
-	DB_DATABASE=notes
+	DB_DATABASE=items
 	DB_USERNAME=root
 	DB_PASSWORD=
 	
@@ -179,12 +179,10 @@ These instructions make the following assumptions:
 	SMTP_PORT=25
 	SMTP_USERNAME=username
 	SMTP_PASSWORD=password
-	
-	NOTE_NAME_EK=7a1e58337405656f257465bef071a30b1487d11c10fdde29881bf65760f5c0ce
-	NOTE_CONTENT_EK=ee1e6104c9c6629189ef2c475b795c0fb5b5c2fbfa633ccb781ebde205eb567b
-	NOTE_LOCAL_CONTENT_EK=df53b05312301230a9de8249bb7beb22f985ceaed63c5a73157c00338aa7a949
-	
+		
 	PRESENTATION_HOST=https://domain.com
+        SINGLE_USER_MODE=false
+        SALT_PSEUDO_NONCE=41ff3804086046cdce2836909535c648
 	```
 	
 	Generate your own encryption keys (EKs) for the above variables using Ruby:
@@ -209,4 +207,4 @@ In the account menu, enter the address of your new server and press Change Serve
 
 ![neeto-account-menu](http://imgur.com/Pre6ffL.png)
 
-Then, register for a new account, and begin using your private new secure Standard Notes server!
+Then, register for a new account, and begin using your private new secure Standard File server!
