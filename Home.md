@@ -1,1 +1,2 @@
-Welcome to the ruby-server wiki!
+[Client Development Guide](https://github.com/standardfile/ruby-server/wiki/Client-Development-Guide)
+[Hosting your own Standard File server](https://github.com/standardfile/ruby-server/wiki/Deploying-a-private-Standard-File-server-with-Amazon-EC2-and-Nginx)
