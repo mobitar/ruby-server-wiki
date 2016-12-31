@@ -181,8 +181,8 @@ These instructions make the following assumptions:
 	SMTP_PASSWORD=password
 		
 	PRESENTATION_HOST=https://domain.com
-        SINGLE_USER_MODE=false
-        SALT_PSEUDO_NONCE=41ff3804086046cdce2836909535c648
+	SINGLE_USER_MODE=false
+	SALT_PSEUDO_NONCE=41ff3804086046cdce2836909535c648
 	```
 	
 	Generate your own encryption keys (EKs) for the above variables using Ruby:
