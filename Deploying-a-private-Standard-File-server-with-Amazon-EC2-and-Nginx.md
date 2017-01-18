@@ -179,9 +179,7 @@ These instructions make the following assumptions:
 	SMTP_PORT=25
 	SMTP_USERNAME=username
 	SMTP_PASSWORD=password
-		
-	PRESENTATION_HOST=https://domain.com
-	SINGLE_USER_MODE=false
+
 	SALT_PSEUDO_NONCE=41ff3804086046cdce2836909535c648
 	```
 	
@@ -205,6 +203,6 @@ You can immediately start using your new server by using the Standard Notes app 
 
 In the account menu, enter the address of your new server and press Change Server:
 
-![neeto-account-menu](http://imgur.com/Pre6ffL.png)
+![sn-account-menu](http://imgur.com/Pre6ffL.png)
 
 Then, register for a new account, and begin using your private new secure Standard File server!
