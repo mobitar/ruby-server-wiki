@@ -104,7 +104,7 @@ These instructions make the following assumptions:
 	sudo yum install git
 	```
 
-1. Set up HTTPS/SSL for your server (free using LetsEncrypt) (required if using the secure client on https://app.neeto.io):
+1. Set up HTTPS/SSL for your server (free using LetsEncrypt) (required if using the secure client on https://app.standardnotes.org):
 
 	```
 	cd /opt
