@@ -174,17 +174,9 @@ These instructions make the following assumptions:
 	DB_DATABASE=items
 	DB_USERNAME=root
 	DB_PASSWORD=
-	
-	SMTP_HOST=your-smtp-host
-	SMTP_PORT=25
-	SMTP_USERNAME=username
-	SMTP_PASSWORD=password
 
 	SALT_PSEUDO_NONCE=41ff3804086046cdce2836909535c648
 	```
-	
-	Generate your own encryption keys (EKs) for the above variables using Ruby:
-	`Digest::SHA256.hexdigest(SecureRandom.random_bytes(32))`
 	
 1. Start Nginx:
 	
