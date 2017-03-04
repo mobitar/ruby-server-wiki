@@ -58,7 +58,7 @@ These instructions make the following assumptions:
 1. Install MySQL (optional; you can also use a hosted db through Amazon RDS, which is recommended):
 	
 	```
-	sudo yum install mysql55-server
+	sudo yum install mysql56-server
 	sudo service mysqld start
 	sudo mysql_secure_installation
 	sudo yum install mysql-devel
