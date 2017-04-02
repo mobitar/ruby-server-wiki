@@ -40,6 +40,7 @@ These instructions make the following assumptions:
 5. Create .env.{web|db}.production files in the project's root directory. Add environment variables (see Environment variables for full listing):
 
    ``` bash
+   $ cp .env.web.producion.template .env.web.production
    $ vim .env.web.production
    ```
 
@@ -48,6 +49,7 @@ These instructions make the following assumptions:
    ```
    RAILS_ENV=production
    SECRET_KEY_BASE=use "bundle exec rake secret"
+   RAILS_SERVE_STATIC_FILES=true
 
    DB_HOST=localhost
    DB_PORT=3306
@@ -59,6 +61,7 @@ These instructions make the following assumptions:
    ```
 
    ``` bash
+   $ cp .env.db.producion.template .env.db.production
    $ vim .env.db.production
    ```
 
@@ -68,7 +71,28 @@ These instructions make the following assumptions:
    MYSQL_ROOT_PASSWORD=
    ```
 
-6. Build and start the services:
+6. Build the services, without starting them:
+   ``` bash
+   $ docker-compose build
+   ```
+
+6. Run the app service to compile the assets:
+   ``` bash
+   $ docker-compose -f docker-compose.yml -f docker-compose.production.yml up app
+   $ docker ps
+   $ docker exec -it {container ID/name of the app service} /bin/bash
+   app> bundle exec rake assets:precompile
+   ```
+
+   At this point the precompiled assets are stored in the `public/`
+   folder of the host. Nginx container will mount the folder as volume
+   and get the assets.
+
+   ``` bash
+   $ docker-compose down
+   ```
+
+6. Start the services:
 
    ``` bash
    $ docker-compose -f docker-compose.yml -f docker-compose.production.yml up -d
@@ -77,7 +101,7 @@ These instructions make the following assumptions:
 7. Login to the `app` service to initialize project:
    ``` bash
    $ docker ps
-   $ docker exec -it {container ID of the app service} /bin/bash
+   $ docker exec -it {container ID/name of the app service} /bin/bash
    app> bundle exec rake db:create db:migrate
    ```
 
